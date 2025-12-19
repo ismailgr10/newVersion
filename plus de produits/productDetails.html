@@ -11,130 +11,123 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
-    <!----><div class="product-details-container">
+    <!---->
+    <div class="product-details-container">
       <button onclick="window.location.href='store.html'" class="back-button">
         <i class="fas fa-arrow-left"></i> Retour à la boutique
       </button>
 
       <div id="productDetailsContent">
-        <!-- Le contenu sera injecté par JavaScript -->
-        <div class="loading">
-          <i class="fas fa-spinner fa-spin"></i>
-          <p>Chargement du produit...</p>
+        <!-- Template HTML statique -->
+        <div class="product-detail-grid">
+          <div class="product-image-section">
+            <div
+              id="productBadge"
+              class="product-badge"
+              style="display: none"></div>
+            <img id="productImage" src="" alt="" class="product-detail-image" />
+          </div>
+
+          <div class="product-info-section">
+            <h1 id="productTitle" class="product-detail-title"></h1>
+            <p id="productShortDesc" class="product-detail-desc"></p>
+            <div id="productPrice" class="product-detail-price"></div>
+
+            <button class="btn-add-to-cart">
+              <i class="fas fa-shopping-cart"></i> Ajouter au panier
+            </button>
+
+            <div class="product-features">
+              <h3><i class="fas fa-star"></i> Points forts</h3>
+              <ul id="productFeatures"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-full-description">
+          <h2><i class="fas fa-info-circle"></i> Description complète</h2>
+          <p id="productFullDesc"></p>
+        </div>
+
+        <div class="product-composition">
+          <h2><i class="fas fa-flask"></i> Composition</h2>
+          <p id="productComposition"></p>
+        </div>
+
+        <div class="product-nutrition">
+          <h2><i class="fas fa-chart-bar"></i> Valeurs nutritionnelles</h2>
+          <table class="nutrition-table">
+            <thead>
+              <tr>
+                <th>Nutriment</th>
+                <th>Pour 100g</th>
+                <th>Par portion</th>
+              </tr>
+            </thead>
+            <tbody id="productNutrition"></tbody>
+          </table>
+        </div>
+
+        <div class="product-usage">
+          <h2><i class="fas fa-utensils"></i> Mode d'emploi</h2>
+          <p id="productUsage"></p>
         </div>
       </div>
     </div>
-
-
     <script src="produitsDetails.js"></script>
     <script>
       // Récupérer l'ID du produit depuis l'URL
       const urlParams = new URLSearchParams(window.location.search);
       const productId = urlParams.get("product");
 
-      if (productId && productsData[productId]) {
-        displayProductDetails(productId);
-      } 
+      displayProductDetails(productId);
 
       // Fonction pour afficher les détails du produit
       function displayProductDetails(productId) {
         const product = productsData[productId];
-        const container = document.getElementById("productDetailsContent");
 
-        let badgeHTML = "";
+        // Remplir les informations de base
+        document.getElementById("productTitle").textContent = product.name;
+        document.getElementById("productShortDesc").textContent =
+          product.shortDesc;
+        document.getElementById("productPrice").textContent = product.price;
+        document.getElementById("productFullDesc").textContent =
+          product.fullDesc;
+        document.getElementById("productComposition").textContent =
+          product.composition;
+        document.getElementById("productUsage").textContent = product.usage;
+
+        // Image
+        const productImage = document.getElementById("productImage");
+        productImage.src = product.image;
+
+        // Badge (conditionnel)
         if (product.badge) {
-          badgeHTML = `<div class="product-badge ${product.badgeClass}">${product.badge}</div>`;
+          const badge = document.getElementById("productBadge");
+          badge.textContent = product.badge;
+          badge.className = `product-badge ${product.badgeClass}`;
+          badge.style.display = "block";
         }
 
-        let featuresHTML = product.features
+        // Features (liste)
+        const featuresList = document.getElementById("productFeatures");
+        featuresList.innerHTML = product.features
           .map((feature) => `<li><i class="fas fa-check"></i> ${feature}</li>`)
           .join("");
 
-        let nutritionHTML = product.nutrition
+        // Nutrition (tableau)
+        const nutritionBody = document.getElementById("productNutrition");
+        nutritionBody.innerHTML = product.nutrition
           .map(
             (item) => `
-          <tr>
-            <td>${item.nutriment}</td>
-            <td>${item.per100g}</td>
-            <td>${item.perServing}</td>
-          </tr>
-        `
+            <tr>
+              <td>${item.nutriment}</td>
+              <td>${item.per100g}</td>
+              <td>${item.perServing}</td>
+            </tr>
+          `
           )
           .join("");
-
-        let tipsHTML = product.tips
-          ? product.tips
-              .map((tip) => `<li><i class="fas fa-lightbulb"></i> ${tip}</li>`)
-              .join("")
-          : "";
-
-        container.innerHTML = `
-          <div class="product-detail-grid">
-            <div class="product-image-section">
-              ${badgeHTML}
-              <img src="${product.image}" alt="${
-          product.name
-        }" class="product-detail-image" />
-            </div>
-            
-            <div class="product-info-section">
-              <h1 class="product-detail-title">${product.name}</h1>
-              <p class="product-detail-desc">${product.shortDesc}</p>
-              <div class="product-detail-price">${product.price}</div>
-              
-              <button class="btn-add-to-cart">
-                <i class="fas fa-shopping-cart"></i> Ajouter au panier
-              </button>
-              
-              <div class="product-features">
-                <h3><i class="fas fa-star"></i> Points forts</h3>
-                <ul>${featuresHTML}</ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-full-description">
-            <h2><i class="fas fa-info-circle"></i> Description complète</h2>
-            <p>${product.fullDesc}</p>
-          </div>
-
-          <div class="product-composition">
-            <h2><i class="fas fa-flask"></i> Composition</h2>
-            <p>${product.composition}</p>
-          </div>
-
-          <div class="product-nutrition">
-            <h2><i class="fas fa-chart-bar"></i> Valeurs nutritionnelles</h2>
-            <table class="nutrition-table">
-              <thead>
-                <tr>
-                  <th>Nutriment</th>
-                  <th>Pour 100g</th>
-                  <th>Par portion</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${nutritionHTML}
-              </tbody>
-            </table>
-          </div>
-
-          <div class="product-usage">
-            <h2><i class="fas fa-utensils"></i> Mode d'emploi</h2>
-            <p>${product.usage}</p>
-          </div>
-
-          ${
-            tipsHTML
-              ? `
-          <div class="product-tips">
-            <h2><i class="fas fa-lightbulb"></i> Conseils d'utilisation</h2>
-            <ul>${tipsHTML}</ul>
-          </div>
-          `
-              : ""
-          }
-        `;
       }
     </script>
   </body>

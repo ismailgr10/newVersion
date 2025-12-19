@@ -1,54 +1,54 @@
-// Script pour la page principale
+// 
 function navigateToProduct(productId) {
-  // Navigation via un lien avec paramètre URL
-  const link = document.createElement("a");
-  link.href = `productDetails.html?product=${productId}`;
-  link.click();
+  window.location.href = `productDetails.html?product=${productId}`;
+}
+// Fonction pour ajouter un produit au panier
+function addToCart(productName, productPrice) {
+  showSuccessMessage(productName);
+  setTimeout(() => {
+    window.location.href = `formulaire.html?product=${productName}&price=${productPrice}`;
+  }, 1500);
 }
 
-// Ajouter les événements de clic sur tous les produits
+// Fonction pour afficher le message de succès
+function showSuccessMessage(productName) {
+  const notification = document.createElement("div");
+  notification.className = "cart-notification";
+  notification.innerHTML = `
+          <i class="fas fa-check-circle cart-notification-icon"></i>
+          <div class="cart-notification-content">
+            <div class="cart-notification-title">Produit ajouté avec succès!</div>
+            <div class="cart-notification-product">${productName}</div>
+          </div>
+        `;
+  document.body.appendChild(notification);
+  setTimeout(() => {
+    notification.classList.add("slide-out");
+    setTimeout(() => notification.remove(), 500);
+  }, 1000);
+}
+
+// Ajouter les gestionnaires d'événements pour tous les boutons "Ajouter au panier"
 document.addEventListener("DOMContentLoaded", () => {
-  const products = document.querySelectorAll(".prod");
-
-  // Produits disponibles (cliquables)
-  const availableProducts = [
-    "prod1",
-    "prod2",
-    "prod3",
-    "prod5",
-    "prod6",
-    "prod8",
-  ];
-
-  products.forEach((product) => {
-    // recuperer ID du produit basé sur le grid-area
-    const gridArea = product.style.gridArea;
-
-    // Vérifier si le produit est disponible
-    if (availableProducts.includes(gridArea)) {
-      // Rendre le produit cliquable
-      product.style.cursor = "pointer";
-
-      // Ajouter l'événement de clic
-      product.addEventListener("click", () => {
-        navigateToProduct(gridArea);
-      });
-    } else {
-      // Produit non disponible
-      product.style.cursor = "not-allowed";
-      product.style.opacity = "0.7";
-    }
+  document.querySelectorAll(".btn-cart").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const card = button.closest(".card, .prod");
+      const name = card.querySelector("h2, .product-title").textContent;
+      const price = card.querySelector(
+        ".new-price, .product-price"
+      ).textContent;
+      addToCart(name, price);
+    });
   });
+});
 
-  // Ajouter un effet visuel pour indiquer que les produits sont cliquables
-  const style = document.createElement("style");
-  style.textContent = `
-    .prod {
-      transition: all 0.3s ease;
-    }
-    .prod:active {
-      transform: scale(0.98);
-    }
-  `;
-  document.head.appendChild(style);
+// Afficher la section catalogue quand on clique sur "View more product"
+document.getElementById("viewMoreBtn").addEventListener("click", function () {
+  const catalogSection = document.getElementById("catalogSection");
+  catalogSection.style.display = "block";
+  // Smooth scroll vers la section
+  catalogSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  // Animation d'apparition
+  catalogSection.style.animation = "fadeInUp 0.8s ease-out";
 });

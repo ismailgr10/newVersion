@@ -30,12 +30,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 1 dose avec 250ml d'eau froide. Consommez 20-30 minutes avant l'entraînement. Ne pas dépasser 2 doses en 24h.",
-    tips: [
-      "Commencer par une demi-dose pour évaluer la tolérance",
-      "Parfait pour les entraînements intenses",
-      "Éviter de prendre après 18h",
-      "Meilleure efficacité à jeun",
-    ],
   },
   promo2: {
     id: "promo2",
@@ -64,12 +58,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 5g (1 mesure) avec 200-300ml d'eau, de jus ou votre boisson préférée. Prenez quotidiennement, de préférence après l'entraînement.",
-    tips: [
-      "Phase de charge : 20g/jour pendant 5-7 jours (optionnel)",
-      "Phase d'entretien : 5g/jour",
-      "Augmentez votre consommation d'eau",
-      "Peut être mélangée avec votre protéine",
-    ],
   },
   promo3: {
     id: "promo3",
@@ -101,12 +89,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 1 dose (32g) avec 250-300ml d'eau, de lait ou de boisson végétale. Consommez 1-3 fois par jour selon vos besoins protéiques.",
-    tips: [
-      "Idéal après l'entraînement pour la récupération",
-      "Parfait en collation entre les repas",
-      "Peut être ajouée aux recettes (pancakes, smoothies)",
-      "Bien agiter ou mixer pour éviter les grumeaux",
-    ],
   },
   promo4: {
     id: "promo4",
@@ -138,12 +120,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 290g (3 mesures) avec 500-700ml d'eau ou de lait. Consommez 1-2 fois par jour, entre les repas ou après l'entraînement.",
-    tips: [
-      "Utilisez un blender pour un mélange optimal",
-      "Parfait pour les ectomorphes (métabolisme rapide)",
-      "Combiner avec un programme d'entraînement adapté",
-      "Peut remplacer un repas en cas de besoin",
-    ],
   },
 
   prod1: {
@@ -173,12 +149,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 1 mesure (30g) avec 200-250ml d'eau ou de lait. Consommez 1-3 portions par jour, idéalement après l'entraînement et entre les repas.",
-    tips: [
-      "Meilleur moment : 30 minutes après l'entraînement",
-      "Peut être mélangé avec des fruits pour un smoothie",
-      "Conserver dans un endroit frais et sec",
-      "Bien agiter avant consommation",
-    ],
   },
   prod2: {
     id: "prod2",
@@ -203,12 +173,6 @@ const productsData = {
     ],
     usage:
       "Prenez 5g (1 cuillère) par jour, de préférence après l'entraînement ou avec un repas contenant des glucides.",
-    tips: [
-      "Phase de charge optionnelle : 20g/jour pendant 5 jours",
-      "Bien s'hydrater pendant l'utilisation",
-      "Peut être mélangée avec du jus de fruits",
-      "Effets visibles après 2-3 semaines",
-    ],
   },
   prod3: {
     id: "prod3",
@@ -237,12 +201,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 1 dose (5g) avec 200ml d'eau froide. Consommez 20-30 minutes avant l'entraînement.",
-    tips: [
-      "Ne pas dépasser 1 dose par jour",
-      "Éviter en fin de journée (contient de la caféine)",
-      "Commencer par une demi-dose pour évaluer la tolérance",
-      "Ne pas utiliser si sensible aux stimulants",
-    ],
   },
 
   prod5: {
@@ -272,12 +230,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 1 dose (5g) avec 300-400ml d'eau. Consommez pendant ou après l'entraînement.",
-    tips: [
-      "Peut être pris pendant l'entraînement",
-      "Idéal pour l'entraînement à jeun",
-      "Aide à maintenir la masse pendant un régime",
-      "Rafraîchissant pendant l'effort",
-    ],
   },
   prod6: {
     id: "prod6",
@@ -306,12 +258,6 @@ const productsData = {
     ],
     usage:
       "Mélangez 1 dose (40g) avec 250-300ml d'eau ou de lait. Prenez 1-2 fois par jour, idéalement après l'entraînement.",
-    tips: [
-      "Formule tout-en-un pratique",
-      "Parfait pour la prise de masse",
-      "Économique : 2 produits en 1",
-      "Meilleurs résultats avec entraînement régulier",
-    ],
   },
 
   prod8: {
@@ -341,12 +287,5 @@ const productsData = {
     ],
     usage:
       "Mélangez 1 dose (30g) avec 200ml d'eau. Idéal immédiatement après l'entraînement pour une récupération rapide.",
-    tips: [
-      "La plus rapide absorption du marché",
-      "Parfait pour les athlètes de haut niveau",
-      "Recommandé après un entraînement intense",
-      "Excellente digestibilité",
-    ],
   },
 };
-
