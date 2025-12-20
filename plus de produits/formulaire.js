@@ -7,13 +7,6 @@ window.addEventListener("DOMContentLoaded", function () {
   const cartItemsContainer = document.getElementById("cartItems");
   const totalPriceElement = document.getElementById("totalPrice");
 
-  if (!productName || !productPrice) {
-    cartItemsContainer.innerHTML =
-      '<p style="color: #ccc; text-align: center;">Votre panier est vide</p>';
-    totalPriceElement.textContent = "0,00€";
-    return;
-  }
-
   // Afficher le produit
   const itemDiv = document.createElement("div");
   itemDiv.className = "cart-item";
@@ -25,8 +18,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Afficher le prix total
   totalPriceElement.textContent = productPrice;
-
-  totalPriceElement.textContent = total.toFixed(2).replace(".", ",") + "€";
 });
 
 // Gérer la soumission du formulaire
@@ -49,23 +40,17 @@ document.getElementById("orderForm").addEventListener("submit", function (e) {
   const country = document.getElementById("country").value;
   const notes = document.getElementById("notes").value;
 
-  // Ici vous pouvez envoyer les données à un serveur
-  console.log("Commande confirmée:");
-  console.log("Produit:", productName, "-", productPrice);
-  console.log("Client:", firstName, lastName);
-  console.log("Email:", email);
 
   // Afficher un message de confirmation
   alert(
     "✅ Commande confirmée avec succès!\n\n" +
       "Merci " +
-      firstName +
       " pour votre commande.\n" +
       "Produit: " +
       productName +
       "\n" +
-      "Vous recevrez un email de confirmation à " +
-      email
+      "Vous recevrez un email de confirmation  " 
+
   );
 
   // Rediriger vers la boutique

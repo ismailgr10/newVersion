@@ -1,7 +1,15 @@
-// 
+//
 function navigateToProduct(productId) {
   window.location.href = `productDetails.html?product=${productId}`;
 }
+
+// Afficher la section catalogue quand on clique sur "View more product"
+document.getElementById("viewMoreBtn").addEventListener("click", function () {
+  const catalogSection = document.getElementById("catalogSection");
+  catalogSection.style.display = "block";
+  catalogSection.style.animation = "fadeInUp 0.8s ease-out";
+});
+
 // Fonction pour ajouter un produit au panier
 function addToCart(productName, productPrice) {
   showSuccessMessage(productName);
@@ -28,7 +36,7 @@ function showSuccessMessage(productName) {
   }, 1000);
 }
 
-// Ajouter les gestionnaires d'événements pour tous les boutons "Ajouter au panier"
+//  les boutons "Ajouter au panier"
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".btn-cart").forEach((button) => {
     button.addEventListener("click", (e) => {
@@ -41,14 +49,4 @@ document.addEventListener("DOMContentLoaded", () => {
       addToCart(name, price);
     });
   });
-});
-
-// Afficher la section catalogue quand on clique sur "View more product"
-document.getElementById("viewMoreBtn").addEventListener("click", function () {
-  const catalogSection = document.getElementById("catalogSection");
-  catalogSection.style.display = "block";
-  // Smooth scroll vers la section
-  catalogSection.scrollIntoView({ behavior: "smooth", block: "start" });
-  // Animation d'apparition
-  catalogSection.style.animation = "fadeInUp 0.8s ease-out";
 });
