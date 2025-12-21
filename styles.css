@@ -19,6 +19,7 @@ ul {
 a {
   text-decoration: none;
   color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
@@ -102,6 +103,7 @@ h1 {
   line-height: 1.2;
   text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
   animation: fadeInUp 1s ease;
+  font-family: "Montserrat", sans-serif;
 }
 h1.typewriter {
   overflow: hidden; /*le texte qui depasse la largeur sera masqué*/
@@ -455,185 +457,6 @@ p {
     margin-right: 5%;
   }
 }
-/*=================*/
-footer {
-  background-color: #0a0a0a;
-  border-top: 1px solid #262626;
-  padding-top: 80px;
-  font-size: 0.95rem;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 50px;
-}
-
-/* --- Colonne 1: Marque --- */
-.brand-col h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: 20px;
-  letter-spacing: -1px;
-  color: white;
-}
-
-.brand-col h2 span {
-  color: #ff0000;
-}
-
-.brand-desc {
-  color: #a1a1aa;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-}
-
-.social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #1a1a1a;
-  color: white;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 1px solid #262626;
-}
-
-.social-btn:hover {
-  background: #ff0000;
-  border-color: #ff0000;
-  transform: translateY(-3px);
-}
-
-/* --- Colonnes de Liens --- */
-.footer-heading {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-  position: relative;
-  padding-left: 15px;
-}
-
-.footer-heading::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 20px;
-  background: #ff0000;
-}
-
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 15px;
-}
-
-.footer-links a {
-  color: #a1a1aa;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.footer-links a:hover {
-  color: #ff0000;
-  padding-left: 5px;
-}
-
-/* --- Info Contact --- */
-.contact-info li {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  color: #a1a1aa;
-  margin-bottom: 20px;
-}
-
-.contact-info i {
-  color: #ff0000;
-  margin-top: 5px;
-}
-
-/* --- Newsletter --- */
-.newsletter-text {
-  color: #a1a1aa;
-  margin-bottom: 20px;
-  font-size: 0.9rem;
-}
-
-.newsletter-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.newsletter-input {
-  padding: 12px 15px;
-  background: #1a1a1a;
-  border: 1px solid #262626;
-  border-radius: 6px;
-  color: white;
-  font-size: 0.9rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.newsletter-input:focus {
-  border-color: #ff0000;
-}
-
-.newsletter-btn {
-  padding: 12px;
-  background: #ff0000;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.newsletter-btn:hover {
-  background: #cc0000;
-}
-
-/* --- Bottom Bar --- */
-.footer-bottom {
-  margin-top: 80px;
-  border-top: 1px solid #1a1a1a;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.copyright {
-  color: #52525b;
-  font-size: 0.85rem;
-}
-
-.copyright span {
-  color: #a1a1aa;
-}
-
 /* ========== FOOTER SIMPLE ========== */
 .simple-footer {
   background: #000;
