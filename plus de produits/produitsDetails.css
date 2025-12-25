@@ -56,6 +56,8 @@
    ============================================ */
 .product-image-section {
   position: relative;
+  overflow: hidden; /* Ensures the zoom doesn't overflow */
+  border-radius: 20px; /* Matches image border radius */
 }
 
 .product-detail-image {
@@ -66,6 +68,37 @@
   background: #0a0a0a;
   border: 2px solid rgba(220, 20, 60, 0.4);
   padding: 20px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Overlay Image for SuppFacts */
+.supp-facts-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #0a0a0a; /* Matches background to cover original image */
+  padding: 20px;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease, overflow 0.5s;
+  z-index: 10;
+}
+
+/* Hover Effects */
+.product-image-section:hover .supp-facts-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.05);
+}
+
+.product-image-section:hover .product-detail-image {
+  opacity: 0.3;
+  transform: scale(0.95);
+  filter: blur(2px);
 }
 
 /* ============================================
@@ -198,50 +231,6 @@
 }
 
 /* ============================================
-   LOADING & ERROR STATES
-   ============================================ */
-.loading {
-  text-align: center;
-  padding: 60px 20px;
-  color: #fff;
-}
-
-.loading i {
-  font-size: 48px;
-  color: #ff0000;
-  margin-bottom: 20px;
-}
-
-.loading p {
-  font-size: 18px;
-  color: #b8b8d1;
-}
-
-.error-message {
-  text-align: center;
-  padding: 60px 20px;
-  background: #1a1a1a;
-  border-radius: 15px;
-  border: 1px solid rgba(220, 20, 60, 0.3);
-}
-
-.error-message i {
-  font-size: 64px;
-  color: #ff0000;
-  margin-bottom: 20px;
-}
-
-.error-message h2 {
-  color: #ff0000;
-  margin-bottom: 15px;
-}
-
-.error-message p {
-  color: #b8b8d1;
-  margin-bottom: 25px;
-}
-
-/* ============================================
    INFORMATION SECTIONS
    ============================================ */
 .product-full-description,
@@ -259,8 +248,7 @@
 .product-full-description h2,
 .product-composition h2,
 .product-nutrition h2,
-.product-usage h2,
-.product-tips h2 {
+.product-usage h2 {
   color: #ff0000;
   margin-bottom: 20px;
   font-size: 28px;
@@ -296,34 +284,4 @@
   color: #ffd700;
   position: absolute;
   left: 0;
-}
-
-/* ============================================
-   NUTRITION TABLE
-   ============================================ */
-.nutrition-table {
-  width: 100%;
-  margin-top: 24px;
-  border-collapse: collapse;
-}
-
-.nutrition-table th,
-.nutrition-table td {
-  padding: 16px;
-  text-align: left;
-  border-bottom: 1px solid rgba(220, 20, 60, 0.2);
-}
-
-.nutrition-table th {
-  background: #0a0a0a;
-  color: #ff0000;
-  font-weight: 600;
-}
-
-.nutrition-table td {
-  color: #e0e0e0;
-}
-
-.nutrition-table tr:hover {
-  background: rgba(220, 20, 60, 0.1);
 }

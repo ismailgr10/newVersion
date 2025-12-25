@@ -11,6 +11,7 @@ const productsData = {
     price: "29,99€",
     discount: "-25%",
     image: "./images/curse_.webp",
+    suppFactsImage: "./suppFacts/SuppFactsCurse.jpg",
     badge: "-25%",
     badgeClass: "promo",
     features: [
@@ -22,12 +23,6 @@ const productsData = {
     ],
     composition:
       "Citrulline malate, caféine anhydre, bêta-alanine, extrait de café vert, L-arginine, vitamines B, arômes naturels, édulcorants.",
-    nutrition: [
-      { nutriment: "Caféine", per100g: "4g", perServing: "155mg" },
-      { nutriment: "Citrulline malate", per100g: "50g", perServing: "2g" },
-      { nutriment: "Bêta-alanine", per100g: "35g", perServing: "1.5g" },
-      { nutriment: "L-arginine", per100g: "25g", perServing: "1g" },
-    ],
     usage:
       "Mélangez 1 dose avec 250ml d'eau froide. Consommez 20-30 minutes avant l'entraînement. Ne pas dépasser 2 doses en 24h.",
   },
@@ -41,6 +36,7 @@ const productsData = {
     price: "21,24€",
     discount: "-15%",
     image: "./images/creatinedrive.webp",
+    suppFactsImage: "./suppFacts/SuppFactscreatine.jpg",
     badge: "-15%",
     badgeClass: "promo",
     features: [
@@ -51,11 +47,6 @@ const productsData = {
       "Sans goût, sans sucre",
     ],
     composition: "Créatine monohydrate micronisée 100% pure.",
-    nutrition: [
-      { nutriment: "Créatine monohydrate", per100g: "100g", perServing: "5g" },
-      { nutriment: "Glucides", per100g: "0g", perServing: "0g" },
-      { nutriment: "Lipides", per100g: "0g", perServing: "0g" },
-    ],
     usage:
       "Mélangez 5g (1 mesure) avec 200-300ml d'eau, de jus ou votre boisson préférée. Prenez quotidiennement, de préférence après l'entraînement.",
   },
@@ -69,6 +60,7 @@ const productsData = {
     price: "34,99€",
     discount: "-30%",
     image: "./images/whey_prot.jpg",
+    suppFactsImage: "./suppFacts/SuppFactswhey.jpg",
     badge: "-30%",
     badgeClass: "promo",
     features: [
@@ -80,13 +72,6 @@ const productsData = {
     ],
     composition:
       "Concentré de protéines de lactosérum (lait) 90%, cacao en poudre, arômes naturels, gomme xanthane, édulcorant (stevia, sucralose).",
-    nutrition: [
-      { nutriment: "Protéines", per100g: "75g", perServing: "24g" },
-      { nutriment: "Glucides", per100g: "8g", perServing: "2.5g" },
-      { nutriment: "dont sucres", per100g: "5g", perServing: "1.6g" },
-      { nutriment: "Lipides", per100g: "6g", perServing: "2g" },
-      { nutriment: "BCAA", per100g: "16g", perServing: "5g" },
-    ],
     usage:
       "Mélangez 1 dose (32g) avec 250-300ml d'eau, de lait ou de boisson végétale. Consommez 1-3 fois par jour selon vos besoins protéiques.",
   },
@@ -100,6 +85,7 @@ const productsData = {
     price: "35,99€",
     discount: "-20%",
     image: "./images/masse_infusion.jpeg",
+    suppFactsImage: "./suppFacts/SuppFactsMassInfusion.jpg",
     badge: "-20%",
     badgeClass: "promo",
     features: [
@@ -111,13 +97,6 @@ const productsData = {
     ],
     composition:
       "Mélange de protéines (concentré de whey, caséine, isolat), maltodextrine, fructose, créatine monohydrate, L-glutamine, MCT en poudre, vitamines, minéraux, arômes.",
-    nutrition: [
-      { nutriment: "Calories", per100g: "380kcal", perServing: "1100kcal" },
-      { nutriment: "Protéines", per100g: "18g", perServing: "52g" },
-      { nutriment: "Glucides", per100g: "70g", perServing: "203g" },
-      { nutriment: "Lipides", per100g: "4g", perServing: "12g" },
-      { nutriment: "Créatine", per100g: "1.7g", perServing: "5g" },
-    ],
     usage:
       "Mélangez 290g (3 mesures) avec 500-700ml d'eau ou de lait. Consommez 1-2 fois par jour, entre les repas ou après l'entraînement.",
   },
@@ -130,6 +109,7 @@ const productsData = {
       "Notre Whey Protein Gold est une protéine de lactosérum de qualité supérieure, spécialement conçue pour soutenir la croissance musculaire et la récupération après l'entraînement. Riche en acides aminés essentiels et en BCAA, elle est rapidement absorbée par l'organisme pour des résultats optimaux. Idéale pour tous les sportifs cherchant à améliorer leurs performances et leur composition corporelle.",
     price: "39,99€",
     image: "./imagesProd/wheyProd.png",
+    suppFactsImage: "./suppFacts/SuppFactswhey.jpg",
     badge: "POPULAIRE",
     badgeClass: "",
     features: [
@@ -141,12 +121,6 @@ const productsData = {
     ],
     composition:
       "Concentré de protéines de lactosérum (lait), arômes naturels, édulcorant (sucralose), lécithine de soja.",
-    nutrition: [
-      { nutriment: "Protéines", per100g: "80g", perServing: "24g" },
-      { nutriment: "Glucides", per100g: "6g", perServing: "2g" },
-      { nutriment: "Lipides", per100g: "5g", perServing: "1.5g" },
-      { nutriment: "BCAA", per100g: "18g", perServing: "5.5g" },
-    ],
     usage:
       "Mélangez 1 mesure (30g) avec 200-250ml d'eau ou de lait. Consommez 1-3 portions par jour, idéalement après l'entraînement et entre les repas.",
   },
@@ -158,6 +132,7 @@ const productsData = {
       "La créatine monohydrate est l'un des suppléments les plus étudiés et efficaces pour améliorer les performances sportives. Elle augmente la production d'ATP, source d'énergie principale des muscles, permettant d'améliorer la force, la puissance et l'endurance lors d'efforts intenses et répétés.",
     price: "24,99€",
     image: "./imagesProd/creaProd.png",
+    suppFactsImage: "./suppFacts/SuppFactscreatine.jpg",
     badge: "",
     badgeClass: "",
     features: [
@@ -168,9 +143,6 @@ const productsData = {
       "Sans additifs",
     ],
     composition: "Créatine monohydrate micronisée 100%",
-    nutrition: [
-      { nutriment: "Créatine monohydrate", per100g: "100g", perServing: "5g" },
-    ],
     usage:
       "Prenez 5g (1 cuillère) par jour, de préférence après l'entraînement ou avec un repas contenant des glucides.",
   },
@@ -182,6 +154,7 @@ const productsData = {
       "C4 Pre-Workout est la formule pré-entraînement ultime pour maximiser vos performances. Avec un mélange unique de caféine, bêta-alanine et créatine, il vous donne l'énergie, la concentration et l'endurance nécessaires pour des entraînements intenses et productifs.",
     price: "34,99€",
     image: "./imagesProd/c4Prod.png",
+    suppFactsImage: "./suppFacts/SuppFactsc4.jpg",
     badge: "-15%",
     badgeClass: "promo",
     features: [
@@ -193,12 +166,6 @@ const productsData = {
     ],
     composition:
       "Bêta-alanine, créatine nitrate, caféine, L-citrulline, vitamines B6 et B12, arômes, colorants.",
-    nutrition: [
-      { nutriment: "Caféine", per100g: "3g", perServing: "150mg" },
-      { nutriment: "Bêta-alanine", per100g: "32g", perServing: "1.6g" },
-      { nutriment: "Créatine nitrate", per100g: "20g", perServing: "1g" },
-      { nutriment: "L-citrulline", per100g: "12g", perServing: "600mg" },
-    ],
     usage:
       "Mélangez 1 dose (5g) avec 200ml d'eau froide. Consommez 20-30 minutes avant l'entraînement.",
   },
@@ -211,6 +178,7 @@ const productsData = {
       "Notre complexe BCAA contient les trois acides aminés essentiels (leucine, isoleucine, valine) dans un ratio optimal 2:1:1. Les BCAA sont cruciaux pour la synthèse protéique, réduisent la fatigue musculaire et accélèrent la récupération après l'effort.",
     price: "29,99€",
     image: "./imagesProd/bcaaProd.png",
+    suppFactsImage: "./suppFacts/SuppFactsbcaa.jpg",
     badge: "",
     badgeClass: "",
     features: [
@@ -222,12 +190,6 @@ const productsData = {
     ],
     composition:
       "L-Leucine, L-Isoleucine, L-Valine, acidifiant (acide citrique), arômes naturels, édulcorant (sucralose).",
-    nutrition: [
-      { nutriment: "BCAA totaux", per100g: "100g", perServing: "5g" },
-      { nutriment: "L-Leucine", per100g: "50g", perServing: "2.5g" },
-      { nutriment: "L-Isoleucine", per100g: "25g", perServing: "1.25g" },
-      { nutriment: "L-Valine", per100g: "25g", perServing: "1.25g" },
-    ],
     usage:
       "Mélangez 1 dose (5g) avec 300-400ml d'eau. Consommez pendant ou après l'entraînement.",
   },
@@ -239,6 +201,7 @@ const productsData = {
       "Nitro-Tech combine le meilleur de deux mondes : une protéine whey de haute qualité enrichie en créatine monohydrate. Cette formule scientifiquement élaborée maximise la croissance musculaire et la force, tout en améliorant la récupération.",
     price: "44,99€",
     image: "./imagesProd/nitroProd.png",
+    suppFactsImage: "../suppFacts/SuppFactsnitrotechù.jpg",
     badge: "NOUVEAU",
     badgeClass: "nouveau",
     features: [
@@ -250,12 +213,6 @@ const productsData = {
     ],
     composition:
       "Mélange de protéines (concentré et isolat de whey), créatine monohydrate, L-glutamine, BCAA, arômes, édulcorants.",
-    nutrition: [
-      { nutriment: "Protéines", per100g: "75g", perServing: "30g" },
-      { nutriment: "Créatine", per100g: "7.5g", perServing: "3g" },
-      { nutriment: "BCAA", per100g: "15g", perServing: "6g" },
-      { nutriment: "Glutamine", per100g: "10g", perServing: "4g" },
-    ],
     usage:
       "Mélangez 1 dose (40g) avec 250-300ml d'eau ou de lait. Prenez 1-2 fois par jour, idéalement après l'entraînement.",
   },
@@ -268,6 +225,7 @@ const productsData = {
       "Hydro Whey est la forme la plus pure et la plus rapidement absorbée de protéine de lactosérum. Grâce au processus d'hydrolyse, les protéines sont pré-digérées en peptides plus petits, permettant une absorption quasi instantanée et une récupération musculaire optimale.",
     price: "54,99€",
     image: "./imagesProd/hydroProd.png",
+    suppFactsImage: "./suppFacts/SuppFacthydrowhey.jpg",
     badge: "",
     badgeClass: "",
     features: [
@@ -279,12 +237,6 @@ const productsData = {
     ],
     composition:
       "Hydrolysat de protéines de lactosérum (lait), enzymes digestives (bromélaïne, papaïne), arômes, édulcorant.",
-    nutrition: [
-      { nutriment: "Protéines", per100g: "88g", perServing: "26g" },
-      { nutriment: "Glucides", per100g: "3g", perServing: "1g" },
-      { nutriment: "Lipides", per100g: "1g", perServing: "0.3g" },
-      { nutriment: "Di et tri-peptides", per100g: "70g", perServing: "21g" },
-    ],
     usage:
       "Mélangez 1 dose (30g) avec 200ml d'eau. Idéal immédiatement après l'entraînement pour une récupération rapide.",
   },

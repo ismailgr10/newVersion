@@ -163,9 +163,30 @@
     <section class="catalog-section" id="catalogSection" style="display: none">
       <h1><span>N</span>os <span>S</span>uppléments <span>P</span>remium</h1>
 
+      <!-- Barre de recherche et filtres -->
+      <div class="filters-container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Rechercher un produit (ex: Whey, Créatine...)" />
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Tout</button>
+          <button class="filter-btn" data-filter="proteine">Protéine</button>
+          <button class="filter-btn" data-filter="creatine">Créatine</button>
+          <button class="filter-btn" data-filter="preworkout">
+            Pre-Workout
+          </button>
+          <button class="filter-btn" data-filter="bcaa">BCAA & Récup</button>
+        </div>
+      </div>
+
       <div class="container-prod">
         <div
           class="prod"
+          data-category="proteine"
           style="grid-area: prod1; cursor: pointer"
           onclick="navigateToProduct('prod1')">
           <div class="product-badge">POPULAIRE</div>
@@ -183,6 +204,7 @@
         </div>
         <div
           class="prod"
+          data-category="creatine"
           style="grid-area: prod2; cursor: pointer"
           onclick="navigateToProduct('prod2')">
           <img src="./imagesProd/creaProd.png" class="imageNewProduct" />
@@ -199,6 +221,7 @@
         </div>
         <div
           class="prod"
+          data-category="preworkout"
           style="grid-area: prod3; cursor: pointer"
           onclick="navigateToProduct('prod3')">
           <div class="product-badge promo">-15%</div>
@@ -216,6 +239,7 @@
         </div>
         <div
           class="prod"
+          data-category="proteine"
           style="grid-area: prod4; cursor: not-allowed; opacity: 0.7">
           <div class="product-badge outofstock">OUT OF STOCK</div>
           <img src="./imagesProd/iso100Prod.png" class="imageNewProduct" />
@@ -229,6 +253,7 @@
         </div>
         <div
           class="prod"
+          data-category="bcaa"
           style="grid-area: prod5; cursor: pointer"
           onclick="navigateToProduct('prod5')">
           <img src="./imagesProd/bcaaProd.png" class="imageNewProduct" />
@@ -245,6 +270,7 @@
         </div>
         <div
           class="prod"
+          data-category="proteine"
           style="grid-area: prod6; cursor: pointer"
           onclick="navigateToProduct('prod6')">
           <div class="product-badge nouveau">NOUVEAU</div>
@@ -262,6 +288,7 @@
         </div>
         <div
           class="prod"
+          data-category="preworkout"
           style="grid-area: prod7; cursor: not-allowed; opacity: 0.7">
           <div class="product-badge outofstock">OUT OF STOCK</div>
           <img src="./imagesProd/2in1.png" class="imageNewProduct" />
@@ -275,6 +302,7 @@
         </div>
         <div
           class="prod"
+          data-category="proteine"
           style="grid-area: prod8; cursor: pointer"
           onclick="navigateToProduct('prod8')">
           <img src="./imagesProd/hydroProd.png" class="imageNewProduct" />
@@ -291,6 +319,7 @@
         </div>
         <div
           class="prod"
+          data-category="proteine"
           style="grid-area: prod9; cursor: not-allowed; opacity: 0.7">
           <div class="product-badge outofstock">OUT OF STOCK</div>
           <img src="./imagesProd/optiMProd.webp" class="imageNewProduct" />
@@ -334,6 +363,7 @@
         </div>
         <div
           class="prod"
+          data-category="proteine"
           style="grid-area: prod12; cursor: not-allowed; opacity: 0.7">
           <div class="product-badge arriving">ARRIVING SOON</div>
           <img src="./imagesProd/massTechProd.png" class="imageNewProduct" />

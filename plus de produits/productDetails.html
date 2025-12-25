@@ -11,7 +11,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
-    <!---->
     <div class="product-details-container">
       <button onclick="window.location.href='store.html'" class="back-button">
         <i class="fas fa-arrow-left"></i> Retour à la boutique
@@ -52,20 +51,6 @@
         <div class="product-composition">
           <h2><i class="fas fa-flask"></i> Composition</h2>
           <p id="productComposition"></p>
-        </div>
-
-        <div class="product-nutrition">
-          <h2><i class="fas fa-chart-bar"></i> Valeurs nutritionnelles</h2>
-          <table class="nutrition-table">
-            <thead>
-              <tr>
-                <th>Nutriment</th>
-                <th>Pour 100g</th>
-                <th>Par portion</th>
-              </tr>
-            </thead>
-            <tbody id="productNutrition"></tbody>
-          </table>
         </div>
 
         <div class="product-usage">
@@ -115,19 +100,24 @@
           .map((feature) => `<li><i class="fas fa-check"></i> ${feature}</li>`)
           .join("");
 
-        // Nutrition (tableau)
-        const nutritionBody = document.getElementById("productNutrition");
-        nutritionBody.innerHTML = product.nutrition
-          .map(
-            (item) => `
-            <tr>
-              <td>${item.nutriment}</td>
-              <td>${item.per100g}</td>
-              <td>${item.perServing}</td>
-            </tr>
-          `
-          )
-          .join("");
+        // Gestion du survol pour afficher suppFactsImage
+        if (product.suppFactsImage) {
+          const imageSection = document.querySelector(".product-image-section");
+
+          // Create overlay image element
+          const overlayImg = document.createElement("img");
+          overlayImg.src = product.suppFactsImage;
+          overlayImg.className = "supp-facts-overlay";
+          overlayImg.alt = "Valeurs Nutritionnelles";
+
+          // Add error handling for the overlay
+          overlayImg.onerror = function () {
+            this.style.display = "none";
+          };
+
+          // Append to the container
+          imageSection.appendChild(overlayImg);
+        }
       }
     </script>
   </body>
