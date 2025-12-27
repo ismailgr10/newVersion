@@ -335,32 +335,7 @@ body {
   outline: none;
 }
 
-.filter-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
-.filter-btn {
-  background: transparent;
-  border: 2px solid #333;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-family: "Montserrat", sans-serif;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: #ff0000;
-  border-color: #ff0000;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
-}
 
 /* ============================================
    CATALOG GRID
@@ -467,46 +442,3 @@ body {
   }
 }
 
-/* ============================================
-   NOTIFICATION PANIER
-   ============================================ */
-.cart-notification {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #28a745, #20c997);
-  color: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(40, 167, 69, 0.5);
-  z-index: 10000;
-  animation: slideIn 0.5s ease-out;
-  font-size: 1.1rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.cart-notification.slide-out {
-  animation: slideIn 0.5s ease-out reverse;
-}
-
-.cart-notification-icon {
-  font-size: 1.5rem;
-}
-
-.cart-notification-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.cart-notification-title {
-  font-size: 1.2rem;
-}
-
-.cart-notification-product {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  margin-top: 5px;
-}

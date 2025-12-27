@@ -69,7 +69,7 @@
 
       // Fonction pour afficher les détails du produit
       function displayProductDetails(productId) {
-        const product = productsData[productId];
+        const product = productsData[productId];// pour acceder a l'objet 
 
         // Remplir les informations de base
         document.getElementById("productTitle").textContent = product.name;
@@ -108,12 +108,8 @@
           const overlayImg = document.createElement("img");
           overlayImg.src = product.suppFactsImage;
           overlayImg.className = "supp-facts-overlay";
-          overlayImg.alt = "Valeurs Nutritionnelles";
 
-          // Add error handling for the overlay
-          overlayImg.onerror = function () {
-            this.style.display = "none";
-          };
+         
 
           // Append to the container
           imageSection.appendChild(overlayImg);

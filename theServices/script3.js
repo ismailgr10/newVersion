@@ -73,3 +73,8 @@ function calculateProteins() {
         alert("Entrez votre poids pour calculer les protéines.");
     }
 }
+
+/* --- 4. Menu Toggle --- */
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
